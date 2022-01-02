@@ -21,11 +21,21 @@ public class LinkedList {
         Node temp = new Node(val);
         if(head == null)            //empty linked list
             head = tail = temp;
-        else{                       //at least one node
-            temp.next = head;       //else temp.next is pointing to add
-            head = temp;            //updata the head 
+        else{                       //else at least one node
+            temp.next = head;       //temp.next is pointing to head
+            head = temp;            //update the head 
         }
         
+    }
+    
+    public void addLast(int val){
+        Node temp = new Node(val);
+        if(head == null)            //empty linked list
+            head = tail = temp;
+        else{                       //else at least one node
+            tail.next = temp;       //tail.next is pointing to temp       
+            tail = temp;            // update the tail
+        }
     }
     
 }
