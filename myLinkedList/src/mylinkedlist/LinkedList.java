@@ -1,4 +1,4 @@
-
+switch
 package mylinkedlist;
 
 /**
@@ -35,6 +35,19 @@ public class LinkedList {
         else{                       //else at least one node
             tail.next = temp;       //tail.next is pointing to temp       
             tail = temp;            // update the tail
+        }
+    }
+    
+    
+    public void deleteFirst(){
+        if(head == null)            //list is empty
+            return;
+        if(head.next == null)       //only one node 
+            head = tail = null;
+        else{                       //more than one node
+            Node temp = head;       //holder for the head   
+            head = head.next;       //moving head to next reference
+            temp = null;            //freeing the temp variable
         }
     }
     
