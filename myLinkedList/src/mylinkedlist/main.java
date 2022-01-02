@@ -18,6 +18,7 @@ public class main {
         //list.deleteFirst();
         System.out.println("Does list contains 5: " + list.contains(5));
         System.out.println("The size of the list is: " + list.size());
+        list.print();
        
         
 //        var arr = list.toArray();
