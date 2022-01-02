@@ -106,4 +106,15 @@ public class LinkedList {
         System.out.println();
     }
     
+    public int[] toArray(){
+        int size = size();
+        int[] arr = new int[size];
+        Node temp = head;
+        for(int i = 0; i < size; i++){
+            arr[i] = temp.val;
+            temp = temp.next;
+        }
+        return arr;
+    }
+    
 }

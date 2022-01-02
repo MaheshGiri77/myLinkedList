@@ -1,6 +1,8 @@
 
 package mylinkedlist;
 
+import java.util.Arrays;
+
 
 public class main {
 
@@ -21,8 +23,8 @@ public class main {
         list.print();
        
         
-//        var arr = list.toArray();
-//        System.out.println(Arrays.toString(arr));
+        var arr = list.toArray();
+        System.out.println(Arrays.toString(arr));
 //        System.out.println(list.getKthFromEnd(3));
 //        
 //        list.reverseList();
