@@ -80,4 +80,20 @@ public class LinkedList {
         return -1;                              //item not found in the list
     }
     
+    public boolean contains(int val){
+        return (indexOf(val) != -1);            //returns true if the indexOf(va) != -1 else return false
+    }
+    
+    public int size(){
+        int size = 0;
+        Node temp = head;
+        if(head == null)                        // if the list is empty
+            return size;
+        while(temp != null){
+            size++;
+            temp = temp.next;
+        }
+        return size;
+    }
+    
 }
