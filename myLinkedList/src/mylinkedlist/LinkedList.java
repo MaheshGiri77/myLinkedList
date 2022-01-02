@@ -66,4 +66,18 @@ public class LinkedList {
         }
     }
     
+    public int indexOf(int value){
+        if (head == null)                       //if the list is empty
+            return -1;
+        Node temp = head;
+        int index = 0;
+        while(temp != null){                    //checks all the item
+            if(temp.val == value)
+                return index;
+            index++;
+            temp = temp.next;
+        }
+        return -1;                              //item not found in the list
+    }
+    
 }
