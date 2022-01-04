@@ -30,6 +30,10 @@ public class main {
         list.reverseList();
         var arr1 = list.toArray();
         System.out.println(Arrays.toString(arr1));
+        
+        System.out.println("Removing 4 from the list");
+        list.remove(4);
+        list.print();
 
     }
     

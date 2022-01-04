@@ -58,7 +58,7 @@ public class LinkedList {
             head = tail = null;
         else{                                   //more than one node
             Node temp = head;
-            while((temp.next).next != null){    // goes upto 2nd last node
+            while((temp.next).next != null){    //checks upto 3rd last node and exits the node if it poits to 2nd last node
                 temp = temp.next;
             }
             tail = temp;                        //tail is pointing to 2nd last node
@@ -158,5 +158,27 @@ public class LinkedList {
             second = second.next;
         }
         return first.val;
+    }
+    
+    public void remove(int val){
+        if(head == null)                //if the list is empty
+            return;
+        else if(head.val == val)        //if head consists the value
+            deleteFirst();
+        else if(tail.val == val)        //if tail consists the value
+            deleteLast();
+        else{
+            Node prev = head;           
+            Node curr = head.next;
+            while(curr.next != null){   //checks from 2nd node to 2nd last node and exits loop if it is the last node
+                if(curr.val == val){
+                    prev.next = curr.next;
+                    curr = null;
+                    break;
+                }
+                prev = curr;
+                curr = curr.next;
+            }
+        }
     }
 }
