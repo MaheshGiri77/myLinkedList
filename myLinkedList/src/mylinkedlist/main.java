@@ -26,11 +26,11 @@ public class main {
         var arr = list.toArray();
         System.out.println(Arrays.toString(arr));
 //        System.out.println(list.getKthFromEnd(3));
-//        
-//        list.reverseList();
-//        var arr1 = list.toArray();
-//        System.out.println(Arrays.toString(arr1));
-//        //list.print();
+       
+        list.reverseList();
+        var arr1 = list.toArray();
+        System.out.println(Arrays.toString(arr1));
+
     }
     
 }

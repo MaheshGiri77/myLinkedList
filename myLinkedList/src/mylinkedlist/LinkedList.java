@@ -117,4 +117,22 @@ public class LinkedList {
         return arr;
     }
     
+    public void reverseList(){
+        if (head == null)
+            return;
+        Node prev = head;
+        Node curr = head.next;
+        while(curr != null){
+            Node forward = curr.next;           //here forward is the holder for next item
+            curr.next = prev;                   // reversing the link
+            prev = curr;                        //update prev
+            curr = forward;                     //update curr
+        }
+        
+        tail = head;                            //tail should point to head of previous head of list
+        tail.next = null;                       //tail.next should point to null to mark end of list
+        
+        head = prev;                            //prev is the last item of previous list so head points to it
+    }
+    
 }
