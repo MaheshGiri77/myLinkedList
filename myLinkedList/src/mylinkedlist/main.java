@@ -25,7 +25,7 @@ public class main {
         
         var arr = list.toArray();
         System.out.println(Arrays.toString(arr));
-//        System.out.println(list.getKthFromEnd(3));
+        System.out.println("3rd item from last: " + list.getKthFromEnd(3));
        
         list.reverseList();
         var arr1 = list.toArray();

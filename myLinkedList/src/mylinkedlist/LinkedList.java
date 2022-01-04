@@ -135,4 +135,28 @@ public class LinkedList {
         head = prev;                            //prev is the last item of previous list so head points to it
     }
     
+    
+    public int getKthFromEnd(int k){
+        if(k > size() || k < 1)                     //k should be in range [1,size()]
+            throw new IllegalStateException();
+        if(head == null)                            //if the list is empty 
+            throw new IllegalStateException();
+        
+        Node first = head;
+        Node second = head;
+        int distance = 0;
+        while(distance < k){                        //traverse second until the second reaches the kth item 
+           second = second.next;
+           distance++;
+        }
+        
+        //After the above loop, the difference in distance between first and second is k
+        //Now traverse first and second until second reaches the end. 
+        //In that case, first will be pointing to kth item from end
+        while(second != null){              
+            first = first.next;
+            second = second.next;
+        }
+        return first.val;
+    }
 }
